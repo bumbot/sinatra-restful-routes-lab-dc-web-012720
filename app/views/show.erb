@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= @recipe.name %></title>
+</head>
+<body>
+    <h1>Recipe Name: <%= @recipe.name %></h1>
+    <br>
+    <h2>Ingredients: <%= @recipe.ingredients %></h2>
+    <br>
+    <h2>Cook Time: <%= @recipe.cook_time %> minutes</h2>
+
+    <a href="/recipes">Back to Index</a>
+    <a href="/recipes/<%=@recipe.id%>/edit">Edit this Page</a><br>
+    <form method="POST" action="/recipes/<%=@recipe.id%>">
+        <input type="hidden" name="_method" value="DELETE">        
+        <input type="submit" value="delete">
+    </form>>
+</body>
+</html>
